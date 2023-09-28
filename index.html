@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      margin: 15px;
+      background-color: #ddd;
+
+    }
+
+    button {
+      border: none;
+      padding: .6rem .8rem;
+      font-size: 1rem;
+      background-color: #444;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bora no tancredao?</h1>
+  <button class="btnSim" type="button">Sim</button>
+  <button class="btnNao" type="button">Não</button>
+
+  <script>
+    const btnNao = document.querySelector(".btnNao")
+    const btnSim = document.querySelector(".btnSim")
+
+    btnNao.addEventListener("mouseover", ()=>{
+      const posicaoAleatoriaTop  = Math.floor(Math.random() * 500)
+      const posicaoAleatoriaLeft  = Math.floor(Math.random() * 500)
+
+
+      btnNao.setAttribute("style", `position: absolute; top: ${posicaoAleatoriaTop}px; left: ${posicaoAleatoriaLeft}px`)
+    })
+
+    btnSim.addEventListener("click",()=>{
+      alert("Entao está combinado")
+    })
+  </script>
+</body>
+</html>
